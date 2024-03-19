@@ -19,7 +19,7 @@ def detectVehicles(filename):
    # img=cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
    result=tfnet.return_predict(img)
    # print(result)
-   for vehicle in result:
+   for vehicle in rAesult:
       label=vehicle['label']   #extracting label
       if(label=="car" or label=="bus" or label=="bike" or label=="truck" or label=="rickshaw"):    # drawing box and writing label
          top_left=(vehicle['topleft']['x'],vehicle['topleft']['y'])
